@@ -21,7 +21,7 @@ function NaverMapLoader({ onLoad }) {
 
     // ✅ 여기서 핵심 수정: ncpKeyId → ncpClientId
     const script = document.createElement('script');
-    script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${naverKey}&submodules=geocoder`;
+    script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${naverKey}&submodules=geocoder`;
     script.async = true;
     script.onload = () => {
       console.log('[NaverMapLoader] 스크립트 로드 완료 → onLoad() 호출');
