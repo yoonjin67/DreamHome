@@ -1,0 +1,15 @@
+version: '2.36.0'
+
+services:
+  react-app:
+    build: .
+    container_name: react-dreamhome-container
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
